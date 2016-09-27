@@ -134,8 +134,6 @@ def greedy(TS, wt, tol=1e-12):
     greedy_points[0] = 0
     dim_RB = 1
     greedy_err[0] = 1.0
-
-    projections = np.zeros(TS_size*len(ts)).reshape(TS_size, len(ts)) 
     
     while continuework:
         last_rb = RB_space[dim_RB-1] # previous basis
@@ -154,7 +152,7 @@ def greedy(TS, wt, tol=1e-12):
         greedy_points[dim_RB] = worst_app
         greedy_err[dim_RB] = worst_err
 
-        # print dim_RB, worst_err, worst_app
+        print dim_RB, worst_err, worst_app
 
         orthobasis = np.copy(TS[worst_app])
         orthobasis = imgs(orthobasis, RB_space, wt) # use IMGS
