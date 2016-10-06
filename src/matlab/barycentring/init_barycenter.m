@@ -25,8 +25,17 @@ if fp1 == -1
     error('Error, could not open Earth ephemeris file');
 end
 
+% skip comment lines starting with '#'
+while 1
+    line1 = fgetl(fp1);
+    if line1(1) == '#'
+        continue;
+    else
+        break;
+    end
+end
+
 % read first line
-line1 = fgetl(fp1);
 line1vals = sscanf(line1, '%f%f%f');
 
 % check that it's read in the right number of values
@@ -69,8 +78,17 @@ if fp1 == -1
     error('Error, could not open Sun ephemeris file');
 end
 
+% skip comment lines starting with '#'
+while 1
+    line1 = fgetl(fp1);
+    if line1(1) == '#'
+        continue;
+    else
+        break;
+    end
+end
+
 % read first line
-line1 = fgetl(fp1);
 line1vals = sscanf(line1, '%f%f%f');
 
 % check that it's read in the right number of values
