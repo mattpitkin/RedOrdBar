@@ -1,0 +1,4 @@
+[submodule "papers/RedOrdBarPaper"]
+	path = papers/RedOrdBarPaper
+	url = https://git.overleaf.com/10841864jbbvkxhvvwzd
+	branch = master
