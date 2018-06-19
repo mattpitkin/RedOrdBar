@@ -2,3 +2,6 @@
 	path = papers/RedOrdBarPaper
 	url = https://git.overleaf.com/10841864jbbvkxhvvwzd
 	branch = master
+[submodule "papers/PulsarROQPaper"]
+	path = papers/PulsarROQPaper
+	url = https://github.com/mattpitkin/PulsarROQPaper.git
